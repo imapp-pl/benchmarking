@@ -73,6 +73,24 @@
 | PointEvaluationBenchmark | fuzzcorp-95 | 50000 | 31723 | 195 | 71989.78 |
 | PointEvaluationBenchmark | pointEvaluation1 | 50000 | 30599 | 195 | 60968.27 |
 
+## Benchmarking of precompiles for Erigon
+
+### Direct execution
+
+| Name | Gascost | Time (ns) | MGas/S | Gascost for 10MGas/S | Gascost for ECDSA eq |
+| ----- | -----: | -----: | -----: | -----: | -----: |
+| PointEvaluation/pointEvaluation1 | 50000 |     1145540.00 | 43.64 | 11455.4 | 58717.3 |
+| PointEvaluation/fuzzcorp-33 | 50000 |     164363.00 | 304.205 | 1643.63 | 8424.84 |
+| PointEvaluation/fuzzcorp-95 | 50000 |     164240.00 | 304.433| 1642.4 | 8418.53 |
+| PrecompiledSha256/128 | 108 |         526.1 | 205.284 | 12.5 | 26.9666 |
+| PrecompiledRipeMD/128 | 1080 |         1250 | 864 | 7.91 | 64.0719 |
+| PrecompiledIdentity/128 | 27 |          8.76 | 3081.84 |  0.08761 | 0.449067 |
+| PrecompiledModExp/nagydani-1-qube | 204 |        1704 | 119.718 | 17.04 | 87.3428 |
+| PrecompiledBn256Add/cdetrio12 | 150 |       11860 | 12.6476 | 118.6 | 607.914 |
+| PrecompiledBn256ScalarMul/cdetrio11 | 6000 |      85425 | 70.2371 | 854.25 | 4378.67 |
+| PrecompiledBn256Pairing/ten_point_match_1 | 385000 |    9107850 | 41.7641 | 92184.5 | 472515 |
+| PrecompiledBlake2F/vector_7 | 1 |    90.96 | 10.9938 |0.9096 | 4.66238 |
+
 ## Conclusions
 
 ## Benchmarking of pointevaluation precompile for EIP-4844
